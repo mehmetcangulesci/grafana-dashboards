@@ -9,12 +9,43 @@
       "pluginName": "Prometheus"
     }
   ],
+  "__elements": {},
   "__requires": [
+    {
+      "type": "panel",
+      "id": "bargauge",
+      "name": "Bar gauge",
+      "version": ""
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "11.4.0"
+    },
     {
       "type": "datasource",
       "id": "prometheus",
       "name": "Prometheus",
       "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "stat",
+      "name": "Stat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "table",
+      "name": "Table",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "timeseries",
+      "name": "Time series",
+      "version": ""
     }
   ],
   "annotations": {
@@ -36,7 +67,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 406894,
+  "id": null,
   "links": [],
   "panels": [
     {
@@ -108,7 +139,6 @@
     },
     {
       "datasource": {
-        "default": true,
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
@@ -221,7 +251,6 @@
     },
     {
       "datasource": {
-        "default": true,
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
@@ -334,7 +363,6 @@
     },
     {
       "datasource": {
-        "default": true,
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
@@ -448,7 +476,6 @@
     },
     {
       "datasource": {
-        "default": true,
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
@@ -563,7 +590,6 @@
     },
     {
       "datasource": {
-        "default": true,
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
@@ -632,7 +658,6 @@
     },
     {
       "datasource": {
-        "default": true,
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
@@ -715,7 +740,6 @@
     },
     {
       "datasource": {
-        "default": true,
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
@@ -2254,7 +2278,6 @@
         },
         {
           "datasource": {
-            "default": true,
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
@@ -6568,7 +6591,11 @@
               "instant": true,
               "legendFormat": "__auto",
               "range": false,
-              "refId": "A"
+              "refId": "A",
+              "datasource": {
+                "type": "prometheus",
+                "uid": "${DS_PROMETHEUS}"
+              }
             },
             {
               "datasource": {
@@ -8588,7 +8615,6 @@
         },
         {
           "datasource": {
-            "default": true,
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
@@ -8695,7 +8721,6 @@
       "type": "row"
     }
   ],
-  "preload": false,
   "schemaVersion": 40,
   "tags": [
     "kafka",
@@ -8706,6 +8731,7 @@
   "templating": {
     "list": [
       {
+        "current": {},
         "datasource": {
           "type": "prometheus",
           "uid": "${DS_PROMETHEUS}"
@@ -8726,10 +8752,7 @@
         "type": "query"
       },
       {
-        "current": {
-          "text": "prod",
-          "value": "prod"
-        },
+        "current": {},
         "datasource": {
           "type": "prometheus",
           "uid": "${DS_PROMETHEUS}"
@@ -8758,6 +8781,6 @@
   "timezone": "",
   "title": "Kafka Broker Overview",
   "uid": "1ca5dcc7-4482-489c-be12-a80b650ba0c6",
-  "version": 12,
+  "version": 1,
   "weekStart": ""
 }
